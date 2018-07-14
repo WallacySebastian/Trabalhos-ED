@@ -35,6 +35,14 @@ double getAltura(Retangulo rt) {
 	return rt0->altura;
 }
 
+Ponto getCentroRetangulo(Retangulo rt) {
+	retangulo *rt0 = NULL;
+
+	rt0 = (retangulo *) rt;
+
+	return criarPonto(rt0->largura/2, rt0->altura/2);
+}
+
 void liberarRetangulo(Retangulo rt){
 	retangulo *rt0 = NULL;
 

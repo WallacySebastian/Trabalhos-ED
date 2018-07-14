@@ -12,7 +12,6 @@ typedef int (*Sobrepoe)(Objeto, Objeto);
 
 /* Função que calcula a distância entre 2 pontos */
 double distancia(Ponto p1, Ponto p2);
-Ponto centroRetangulo(Forma f);
 int pontoInternoAoCirculo(Ponto p, Objeto obj);
 int pontoInternoAoRetangulo(Ponto p, Objeto obj);
 int pontoInterno(Ponto p, Objeto obj, PontoInterno pi);

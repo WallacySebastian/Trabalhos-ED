@@ -12,13 +12,12 @@ typedef void* Objeto;
 Objeto criarObjeto(char *id, Forma forma, Ponto posicao, char *cor1, char *cor2);
 /* Esta função retorna o ID de um objeto */
 char *getId(Objeto obj);
-
 /* Esta função retorna a forma de um objeto */
 Forma getForma(Objeto obj);
 /* Esta função retorna a posição do objeto no plano 2D */
 Ponto getPosicao(Objeto obj);
 /* Esta função retorna o ponto que indica o centro do objeto */
-Ponto getPosicaoCentro(Objeto obj);
+Ponto getPosicaoCentro(Objeto obj, GetCentro gc);
 /* Esta função retorna a cor de preenchimento do objeto */
 char *getCor1(Objeto obj);
 /* Esta função retorna a cor de borda do objeto */

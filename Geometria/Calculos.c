@@ -18,10 +18,6 @@ double distancia(Ponto p1, Ponto p2) {
 	return d;
 }
 
-Ponto centroRetangulo(Forma f) {
-	
-} 
-
 int pontoInternoAoCirculo(Ponto p, Objeto obj) {
 	double d = 0;
 	double raio = 0;

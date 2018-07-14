@@ -49,6 +49,15 @@ Ponto getPosicao(Objeto obj) {
 	return obj0->posicao;
 }
 
+Ponto getPosicaoCentro(Objeto obj, GetCentro gc) {
+	Ponto pc = NULL, ppc = NULL;
+
+	pc = getCentro(getForma(obj), gc);
+	ppc = criarPonto(getX(getPosicao(obj))+getX(pc), getY(getPosicao(obj))+getY(pc));
+
+	return ppc;
+}
+
 char *getCor1(Objeto obj) {
 	objeto *obj0 = NULL;
 

@@ -25,6 +25,10 @@ double getRaio(Circulo c) {
 	return c0->raio;
 }
 
+Ponto getCentroCirculo(Circulo c) {
+	return criarPonto(0, 0);
+}
+
 void liberarCirculo(Circulo c) {
 	circulo *c0 = NULL;
 
