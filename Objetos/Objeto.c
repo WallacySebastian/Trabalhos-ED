@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "Objeto.h"
 
-struct estrutura_objeto {
+struct tipo_objeto {
 	char *id;
 	Forma forma;
 	Ponto posicao;
@@ -9,7 +9,7 @@ struct estrutura_objeto {
 	char *cor2;
 };
 
-typedef struct estrutura_objeto objeto;
+typedef struct tipo_objeto objeto;
 
 Objeto criarObjeto(char *id, Forma forma, Ponto posicao, char *cor1, char *cor2) {
 	objeto *obj0 = NULL;
