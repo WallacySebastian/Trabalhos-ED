@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include "Circulo.h"
 
-struct estrutura_circulo {
+struct forma_circulo {
 	double raio;
 };
 
-typedef struct estrutura_circulo circulo;
+typedef struct forma_circulo circulo;
 
 Circulo criarCirculo(double raio) {
 	circulo *c0 = NULL;
