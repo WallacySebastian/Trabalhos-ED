@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include "Ponto.h"
 
-struct estrutura_ponto {
+struct geo_ponto {
 	double x;
 	double y;
 };
 
-typedef struct estrutura_ponto ponto;
+typedef struct geo_ponto ponto;
 
 Ponto criarPonto(double x, double y) {
 	ponto *p0 = NULL;
