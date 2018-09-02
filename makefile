@@ -9,4 +9,4 @@ flags = -lm -g
 teste: $(obj)
 	$(CC) -o teste $(obj) $(flags)
 clean:
-	rm -f $(obj) teste
+	rm -f $(obj) teste *.svg

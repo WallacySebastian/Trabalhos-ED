@@ -8,6 +8,7 @@
 #include "Geometria/Calculos.h"
 #include "Objetos/Objeto.h"
 #include "Objetos/Calculos.h"
+#include "Arquivos/Svg.h"
 
 int main(int argc, char const *argv[]) {
 	Objeto o1 = NULL, o2 = NULL;
@@ -15,6 +16,7 @@ int main(int argc, char const *argv[]) {
 	char *cor1 = NULL, *cor2 = NULL;
 	char *cor3 = NULL, *cor4 = NULL;
 	Ponto p = NULL;
+	FILE *arq = NULL;
 
 	id1 = (char *) calloc(20, sizeof(char));
 	id2 = (char *) calloc(20, sizeof(char));
@@ -23,6 +25,7 @@ int main(int argc, char const *argv[]) {
 	cor3 = (char *) calloc(20, sizeof(char));
 	cor4 = (char *) calloc(20, sizeof(char));
 	p = criarPonto(10, 60.1);
+	arq = fopen("aaa.svg", "w");
 
 	strcpy(id1, "primeiro");
 	strcpy(id2, "segundo");
@@ -38,9 +41,15 @@ int main(int argc, char const *argv[]) {
 	printf("É interno? %s\n", pontoInterno(p, o1, pontoInternoAoRetangulo) ? "sim":"não");
 	printf("%ld, %ld\n", sizeof(*(getForma(o1))), sizeof(*(getForma(o2))));
 
+	iniciarSvg(arq);
+	escreverForma(arq, o1, escreverCirculo);
+	escreverForma(arq, o2, escreverRetangulo);
+	terminarSvg(arq);
+
 	liberarObjeto(o1, liberarCirculo);
 	liberarObjeto(o2, liberarRetangulo);
 	liberarPonto(p);
+	fclose(arq);
 
 	return 0;
 }
