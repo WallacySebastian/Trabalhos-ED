@@ -2,12 +2,12 @@
 #include "Reta.h"
 #include "Calculos.h"
 
-struct estrutura_reta {
+struct geo_reta {
 	Ponto p1;
 	Ponto p2;
 };
 
-typedef struct estrutura_reta reta;
+typedef struct geo_reta reta;
 
 Reta criarReta(Ponto p1, Ponto p2) {
 	reta *r0 = NULL;

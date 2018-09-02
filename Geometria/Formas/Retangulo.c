@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include "Retangulo.h"
 
-struct estrutura_retangulo {
+struct forma_retangulo {
 	double largura;
 	double altura;
 };
 
-typedef struct estrutura_retangulo retangulo;
+typedef struct forma_retangulo retangulo;
 
 Retangulo criarRetangulo(double largura, double altura) {
 	retangulo *rt0 = NULL;
