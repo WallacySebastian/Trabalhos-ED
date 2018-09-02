@@ -34,12 +34,12 @@ int main(int argc, char const *argv[]) {
 	o1 = criarObjeto(id1, (Forma) criarCirculo(10), criarPonto(10, 50), cor1, cor2);
 	o2 = criarObjeto(id2, (Forma) criarRetangulo(10, 10), criarPonto(60, 50), cor3, cor4);
 
-	printf("Distancia entre eles: %lf\n", distanciaObjetos(o1, &getCentroCirculo, o2, &getCentroRetangulo));
-	printf("É interno? %s\n", pontoInterno(p, o1, &pontoInternoAoRetangulo) ? "sim":"não");
+	printf("Distancia entre eles: %lf\n", distanciaObjetos(o1, getCentroCirculo, o2, getCentroRetangulo));
+	printf("É interno? %s\n", pontoInterno(p, o1, pontoInternoAoRetangulo) ? "sim":"não");
 	printf("%ld, %ld\n", sizeof(*(getForma(o1))), sizeof(*(getForma(o2))));
 
-	liberarObjeto(o1, &liberarCirculo);
-	liberarObjeto(o2, &liberarRetangulo);
+	liberarObjeto(o1, liberarCirculo);
+	liberarObjeto(o2, liberarRetangulo);
 	liberarPonto(p);
 
 	return 0;

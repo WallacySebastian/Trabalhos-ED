@@ -20,6 +20,24 @@ void escreverReta(FILE *arquivo, Reta r) {
 		getX(getP1(r)), getY(getP1(r)), getX(getP2(r)), getY(getP2(r)));
 }
 
+void escreverCirculo(FILE *arquivo, Objeto obj) {
+	fprintf(
+		arquivo,
+		"<circle cx=\"%lf\" cy=\"%lf\" r=\"%lf\" stroke=\"%s\" stroke-width=\"2\" fill=\"%s\" />\n",
+		getX(getPosicao(obj)), getY(getPosicao(obj)), getRaio((Circulo) getForma(obj)), getCor1(obj), getCor2(obj));
+}
+
+void escreverRetangulo(FILE *arquivo, Objeto obj) {
+	fprintf(
+		arquivo,
+		"<rect x=\"%lf\" y=\"%lf\" width=\"%lf\" height=\"%lf\" stroke=\"%s\" stroke-width\"2\" fill=\"%s\" />\n",
+		getX(getPosicao(obj)), getY(getPosicao(obj)), getLargura((Retangulo) getForma(obj)), getAltura((Retangulo) getForma(obj)), getCor1(obj), getCor2(obj));
+}
+
+void escreverForma(FILE *arquivo, Objeto obj, EscreverForma ef) {
+	ef(arquivo, obj);
+}
+
 void terminarSvg(FILE *arquivo) {
 	fprintf(arquivo, "</svg>\n");
 }

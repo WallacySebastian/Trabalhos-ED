@@ -6,7 +6,7 @@
 #include "../Ponto.h"
 
 typedef void* Forma;
-typedef void* (*GetCentro)(void *);
+typedef Ponto (*GetCentro)(void *);
 typedef void (*LiberarForma)(void *);
 
 Ponto getCentro(Forma forma, GetCentro gc);
